@@ -1,35 +1,31 @@
 import java.util.Scanner;
 public class App5 {
-    public static void main(String[] args) {
-        int n;
-        boolean res;
-        Scanner sc;
+    public static void main(String[] args)throws Exception{
+        int a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kiem tra so hoan thien.");
         do {
-            System.out.print("Input n = ");
-            sc = new Scanner(System.in);
-            n = sc.nextInt();
-        }while(n <= 0);
-        res = check_perfect_num(n);
-        if(res) {
-            System.out.println(n + " la so hoan thien ");
-        }
-        else {
-            System.out.println(n + " la so khong hoan thien ");
-        }
+            System.out.println("a= ");
+            a = sc.nextInt();
+            if (a < 0) {
+                System.out.println("Gia tri khong hop le. Vui long nhap lai.");
+            }
+        } while (a<0);
+        if (check(a) == true)
+            System.out.println(a+" la so hoan thien.");
+        else
+            System.out.println(a+" khong la so hoan thien.");
         sc.close();
     }
-    public static boolean check_perfect_num(int n) {
-        int sum_aliquots = 0;
-        for(int i = 1; i < n; i++) {
-            if(n%i == 0) {
-            sum_aliquots += i;
-            }
+    public static boolean check(int a){
+        int tong = 0;
+        for(int i = 1;i <= a/2;i++){
+            if((a % i) == 0)
+                tong+=i;
         }
-        if(sum_aliquots == n) {
+        if (tong == a) {
             return true;
         }
-        else {
-            return false;
-        }
+        return false;
     }
 }
