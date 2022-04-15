@@ -1,0 +1,24 @@
+import java.net.PortUnreachableException;
+import java.util.Scanner;
+public class HinhTru extends HinhTron{
+    public float chieuCao;
+    //constructor
+    private Object thetich;
+    private float dientich;
+    private String ten;
+    public HinhTru(){
+        ten="Hinh Tru";
+    }
+    public void nhapChieuCao(){
+        nhapBanKinh();
+        System.out.println("chieu cao: ");
+        Scanner sc= new Scanner(System.in);
+        chieuCao=sc.nextFloat();
+
+    }
+    public void tinhTheTich(){
+        inDienTich();
+        thetich =dientich*chieuCao;
+    }
+
+}
