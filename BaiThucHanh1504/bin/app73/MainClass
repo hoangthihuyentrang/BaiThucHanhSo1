@@ -1,0 +1,21 @@
+package app73;
+
+import app73.ToaDo;
+
+public class MainClass {
+public static void main(String[]args){
+    
+// Các thuộc tỉnh x, y này chỉ được truy xuất đến thông qua thể hiện ToaDo1 
+ToaDo ToaDo1 = new ToaDo();
+ToaDo1.x=10;
+ToaDo1.y = 20;
+
+// Các thuộc tỉnh x, ý này chỉ được truy xuất đến thông qua thể hiện ToaDo2 
+ToaDo ToaDo2 = new ToaDo();
+    ToaDo2.x = 5;
+ToaDo2.y = 6;
+
+// Thuộc tỉnh thongTin lại được truy xuất đến thông qua lớp ToaDo 
+ToaDo.thongTin = "Lưu tọa độ các hình học";
+  }
+}

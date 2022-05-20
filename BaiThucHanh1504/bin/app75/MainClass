@@ -1,0 +1,17 @@
+package app75;
+
+import app75.HinhchuNhat;
+import app75.HinhTron;
+import app75.HinHhoc;
+
+public class MainClass {
+    public static void main(String[] args) {
+
+        Hinhhoc HinhHoc = new HinhHoc();
+        HinhTron HinhTron1 = new HinhTron();
+        HinhTron HinhTron2 = new HinhTron();
+        HinhchuNhat HinhchuNhat = new HinhchuNhat();
+
+        System.out.println("Có tất cả " + HinhHoc.dem + " hình trong ứng dụng trên ");
+    }
+}

@@ -1,0 +1,13 @@
+package app71;
+import app71.HinhTron;
+import app71.ToaDo;
+public class MainClass {
+    
+        public static void main (String[]args){
+            HinhTron ht = new HinhTron();
+            ht.setBanKinh(10);
+            float chuVi=ht.tinhChuVi();
+            float dienTich= ht.tinhDienTich();
+            System.out.println("chu vi HinhTron: "+chuVi+"\ndien tich HinhTron: "+ dienTich);
+        }
+    } 

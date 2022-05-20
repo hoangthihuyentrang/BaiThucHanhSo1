@@ -1,3 +1,5 @@
+package shapes;
+
 import java.net.PortUnreachableException;
 import java.util.Scanner;
 public class HinhTru extends HinhTron{

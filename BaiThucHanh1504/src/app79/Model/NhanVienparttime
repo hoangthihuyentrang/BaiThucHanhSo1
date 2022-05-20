@@ -1,0 +1,20 @@
+package app79.model;
+
+    import app79.util.Configs;
+public class NhanVienparttime extends NhanVien{
+    private int gioLamViec;
+
+    public NhanVienparttime(String ten, int gioLamViec){
+        this.ten = ten;
+        this.gioLamViec = gioLamViec;
+    }
+
+    @Override
+    public String loainhanvien(){
+        return "Nhan Vien thoi vu.";
+    }
+
+    public void tinhLuong(){
+        luong = config.LUONG_NHAN_VIEN_PART_TIME_MOI_GIO * gioLamViec;
+    }
+}

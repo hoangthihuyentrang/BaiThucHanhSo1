@@ -1,0 +1,7 @@
+package app75;
+
+public class HinhTron  extends hinhhoc {
+        public hinhTron() {
+            super();
+        } 
+    }

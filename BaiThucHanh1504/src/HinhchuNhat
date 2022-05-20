@@ -1,29 +1,36 @@
-import java.util.Scanner;
-public class HinhchuNhat extends HinhHoc{
-    public float dai;
-    public float rong;
-    private float chuvi;
-    private float dientich;
-    private String ten;
-    //constructor
-    public HinhchuNhat(){
-        ten="hinh chu nhat";
-    }
-    public void nhapChieuDai(){
-        System.out.println("chieu dai:");
-        Scanner sc=new Scanner(System.in);
-        dai=sc.nextFloat();
+package shapes;
 
+import java.util.Scanner;
+public class HinhchuNhat extends HinhHoc {
+    public float cDai;
+    public float cRong;
+
+    public HinhchuNhat()
+    {
+        ten = "Hình Chữ Nhật";
     }
-    public void nhapChieuRong(){
-        System.out.println("chieu rong:");
-        Scanner sc=new Scanner(System.in);
-        rong=sc.nextFloat();
+
+    public void nhapChieuDai()
+    {
+        System.out.println("Chiều dài = ");
+        Scanner sc = new Scanner(System.in);
+        cDai = sc.nextFloat();
     }
-    public void tinhChuVi(){
-        chuvi =(dai+rong)*2;
+
+    public void nhapChieuRong()
+    {
+        System.out.println("Chiều rộng = ");
+        Scanner sc = new Scanner(System.in);
+        cRong = sc.nextFloat();
     }
-     public void tinhDienTich(){
-         dientich =dai*rong;
-     }
+
+    public void tinhChuVi()
+    {
+        chuVi = 2 * ( cDai + cRong );
+    }
+
+    public void tinhDienTich()
+    {
+        dienTich = cDai * cRong;
+    }
 }

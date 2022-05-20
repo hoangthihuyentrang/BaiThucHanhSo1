@@ -1,0 +1,32 @@
+package app77;
+
+import java.util.Scanner;
+    
+    public class HinhTron extends Config {
+        protected float banKinh;
+        private Scanner scanner;
+        
+        public HinhTron() {
+            super();
+            scanner = new Scanner(System.in);
+        }
+
+        public void nhapBanKinh() {
+
+            System.out.println("Bạn dùng đơn vị tính nào :");
+            System.out.println("\t1 = Centimet");
+            System.out.println("\t2 = inch");
+            Config.donVi = scanner.nextInt();
+    
+            System.out.println("Hãy nhập vào Bán kính Hình tròn ");
+            banKinh = scanner.nextFloat();
+        }
+        public void inThongTin() {
+            if(Config.donVi==Config.DON_VI_CM){
+                System.out.println("Hình tròn có bán kính "+ banKinh +" cm ");
+                System.out.println("Tương đương" +Config.ChuyenCentimetSangInch(banKinh) + " inch");
+            }else{
+                System.out.println("Hình tròn có bán kính " + banKinh + " inch");
+                System.out.println("Tương đương" + Config.ChuyenInchSangCentimet(banKinh) + " cm");
+            }
+        }

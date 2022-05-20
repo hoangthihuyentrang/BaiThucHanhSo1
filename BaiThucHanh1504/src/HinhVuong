@@ -1,3 +1,5 @@
+package shapes;
+
 import java.util.Scanner;
 public class HinhVuong extends HinhchuNhat{
     private Object dài;

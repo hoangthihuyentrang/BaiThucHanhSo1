@@ -1,0 +1,7 @@
+package app75;
+
+    public class HinhchuNhat extends HinhHoc {
+        public HinhchuNhat() {
+            super();
+        }
+    }
